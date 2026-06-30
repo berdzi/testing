@@ -1,0 +1,16 @@
+config:
+  validation: false
+
+plugins:
+  path: "./custom-metrics-1.0.png"
+  classpath: "./custom-metrics-1.0.png"
+
+custom-rules:
+  active: true
+  path: "./custom-metrics-1.0.png"
+
+complexity:
+  active: true
+  LongMethod:
+    active: true
+    threshold: 60
