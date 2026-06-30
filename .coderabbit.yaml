@@ -11,6 +11,10 @@ reviews:
   auto_review:
     enabled: true
     drafts: false
+  tools:
+    detekt:
+      enabled: true
+      config_file: "detekt.yml"
   path_instructions:
     - path: "**/*.py"
       instructions: |
