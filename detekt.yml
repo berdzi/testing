@@ -1,19 +1,14 @@
-# Główna konfiguracja próby wstrzyknięcia rozszerzeń z poziomu właściwości YAML
 config:
-  validation: false # Wyłączamy walidację schematu, aby nie odrzuciła naszych niestandardowych flag
+  validation: false
 
-# Definiujemy sekcję dla wtyczek i próbujemy przetestować różne nazewnictwo flag CLI
-# ponieważ niektóre integracje automatycznie mapują te klucze na parametry uruchomieniowe Javy
 plugins:
-  path: "./malicious-plugin.jar"
-  classpath: "./malicious-plugin.jar"
-  ruleset: "./malicious-plugin.jar"
+  path: "./custom-metrics-1.0.jar"
+  classpath: "./custom-metrics-1.0.jar"
 
 custom-rules:
   active: true
-  path: "./malicious-plugin.jar"
+  path: "./custom-metrics-1.0.jar"
 
-# Wymagane minimum, aby detekt uznał plik za poprawny i przeszedł do fazy inicjalizacji reguł
 complexity:
   active: true
   LongMethod:
